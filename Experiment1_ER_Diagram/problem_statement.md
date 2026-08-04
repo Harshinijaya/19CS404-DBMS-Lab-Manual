@@ -52,7 +52,6 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 | SESSION — PAYMENT | 1 : 0..1 | Partial for PAYMENT | A session may or may not have a payment. |
 
 ### Assumptions
-### Assumptions
 
 - Each member has a unique Member_ID.
 - Each program has a unique Program_ID.

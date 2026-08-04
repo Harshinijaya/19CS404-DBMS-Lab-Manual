@@ -27,13 +27,18 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### Entities and Attributes
 
+### Entities and Attributes
+
 | Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|--------|---------------------|-------|
+| MEMBER | Member_ID (PK), Name, Membership_Type, Start_Date | Stores member registration details. |
+| PROGRAM | Program_ID (PK), Program_Name | Stores gym programs such as Yoga, Zumba, and Weight Training. |
+| TRAINER | Trainer_ID (PK), Trainer_Name | Stores trainer details. |
+| MEMBER_PROGRAM | Member_ID (PK, FK), Program_ID (PK, FK) | Represents the programs joined by each member. |
+| PROGRAM_TRAINER | Program_ID (PK, FK), Trainer_ID (PK, FK) | Represents trainers assigned to each program. |
+| SESSION | Session_ID (PK), Member_ID (FK), Trainer_ID (FK), Session_Date, Session_Time | Stores personal training session details. |
+| ATTENDANCE | Attendance_ID (PK), Member_ID (FK), Session_ID (FK), Attendance_Date, Status | Records attendance for each session. |
+| PAYMENT | Payment_ID (PK), Member_ID (FK), Session_ID (FK), Amount, Payment_Date, Payment_Type | Tracks payments for memberships and sessions. |
 
 ### Relationships and Constraints
 

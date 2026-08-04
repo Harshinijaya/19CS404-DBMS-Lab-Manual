@@ -41,18 +41,31 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### Relationships and Constraints
 
+
 | Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|--------------|-------------|---------------|-------|
+| MEMBER — PROGRAM | M : N | Partial | A member can join multiple programs, and a program can have multiple members. |
+| PROGRAM — TRAINER | M : N | Partial | A program can have multiple trainers, and a trainer can be assigned to multiple programs. |
+| MEMBER — SESSION | 1 : M | Total for SESSION | A member can book multiple personal training sessions. |
+| TRAINER — SESSION | 1 : M | Total for SESSION | A trainer can conduct multiple personal training sessions. |
+| MEMBER — PAYMENT | 1 : M | Total for PAYMENT | A member can make multiple payments for memberships and sessions. |
+| SESSION — PAYMENT | 1 : 0..1 | Partial for PAYMENT | A session may or may not have a payment. |
 
 ### Assumptions
-- 
-- 
-- 
+### Assumptions
 
----
+- Each member has a unique Member_ID.
+- Each program has a unique Program_ID.
+- Each trainer has a unique Trainer_ID.
+- A member can join multiple programs.
+- A program can have multiple members.
+- A program can be assigned to multiple trainers.
+- A trainer can be assigned to multiple programs.
+- Each personal training session is booked by one member and conducted by one trainer.
+- Attendance is recorded for each training session.
+- A member can make multiple payments for memberships and training sessions.
+- A payment may be associated with a membership or a personal training session.
+- Membership type and start date are recorded during member registration.
 
 # Scenario B: City Library Event & Book Lending System
 

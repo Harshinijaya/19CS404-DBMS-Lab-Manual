@@ -23,25 +23,20 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="887" height="718" alt="Screenshot 2026-08-04 101151" src="https://github.com/user-attachments/assets/e3a45c9e-3032-4e1d-9a15-44122d52a636" />
 
-### Entities and Attributes
+Entities and Attributes
+| Relationship         | Cardinality | Participation        | Notes                                                                                     |
+| -------------------- | ----------- | -------------------- | ----------------------------------------------------------------------------------------- |
+| MEMBER — PROGRAM     | M : N       | Partial              | A member can join multiple programs, and a program can have multiple members.             |
+| PROGRAM — TRAINER    | M : N       | Partial              | A program can have multiple trainers, and a trainer can be assigned to multiple programs. |
+| MEMBER — SESSION     | 1 : M       | Total for SESSION    | A member can book multiple personal training sessions.                                    |
+| TRAINER — SESSION    | 1 : M       | Total for SESSION    | A trainer can conduct multiple personal training sessions.                                |
+| SESSION — ATTENDANCE | 1 : 1       | Total for ATTENDANCE | Attendance is recorded for each personal training session.                                |
+| MEMBER — ATTENDANCE  | 1 : M       | Total for ATTENDANCE | A member can have multiple attendance records.                                            |
+| MEMBER — PAYMENT     | 1 : M       | Total for PAYMENT    | A member can make multiple payments for memberships and sessions.                         |
+| SESSION — PAYMENT    | 1 : 0..1    | Partial for PAYMENT  | A session may or may not have a payment.                                                  |
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
 
 ### Assumptions
 - 
@@ -64,8 +59,8 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="1027" height="737" alt="Screenshot 2026-08-04 101239" src="https://github.com/user-attachments/assets/a534ad03-6b95-4a08-8f9b-c3ea71b31ab1" />
+
 
 ### Entities and Attributes
 
@@ -107,7 +102,8 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="1280" height="838" alt="ER3" src="https://github.com/user-attachments/assets/0f79a017-6bec-427d-bdf3-e72d0ff3ad3d" />
+
 
 ### Entities and Attributes
 

@@ -104,8 +104,8 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Insert all employees from Former_employees into Employee
+
+Insert all employees from Former_employees into Employee
 
 Table attributes are EmployeeID, Name, Department, Salary
 | EmployeeID | Name        | Department  | Salary |
@@ -117,7 +117,7 @@ Table attributes are EmployeeID, Name, Department, Salary
 ```sql
 INSERT INTO Employee SELECT * FROM Former_employees;
 
--- 
+
 ```
 
 **Output:**
@@ -126,7 +126,7 @@ INSERT INTO Employee SELECT * FROM Former_employees;
 
 
 **Question 2**
---- Insert the following products into the Products table:
+ Insert the following products into the Products table:
 
 Name        Category     Price       Stock
 ----------  -----------  ----------  ----------
@@ -140,7 +140,7 @@ Table attributes are Name, Category, Price, Stock
 | Smartphone | Electronics | 800 | 150 |
 | Headphones | Accessories | 200 | 300 |
 
--- 
+
 
 ```sql
 INSERT INTO Products (Name,Category,Price,Stock) VALUES('Smartphone','Electronics',800,150);
@@ -153,7 +153,7 @@ INSERT INTO Products (Name,Category,Price,Stock) VALUES('Headphones','Accessorie
 
 
 **Question 3**
----Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
+Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
 
 Sample table: customer
 Table attributes are customer_id, cust_name, city, grade, salesman_id, birth_date
@@ -165,7 +165,7 @@ Table attributes are customer_id, cust_name, city, grade, salesman_id, birth_dat
 | 103 | Rahul | Hyderabad | 300 | 5003 | 1996-09-10 |
  
  
--- 
+
 
 ```sql
 ALTER TABLE customer

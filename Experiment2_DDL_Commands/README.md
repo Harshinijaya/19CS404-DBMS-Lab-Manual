@@ -133,13 +133,6 @@ Name        Category     Price       Stock
 Smartphone  Electronics  800         150
 Headphones  Accessories  200         300
 For example:
-Test	Result
-SELECT Name, Category, Price, Stock FROM Products;
-
-Name         Category      Price      Stock
------------  ------------  ---------  -----
-Smartphone   Electronics   800        150
-Headphones   Accessories   200        300
 
 -- 
 
@@ -158,11 +151,7 @@ INSERT INTO Products (Name,Category,Price,Stock) VALUES('Headphones','Accessorie
 
 Sample table: customer
 
- customer_id |   cust_name    |    city    | grade | salesman_id 
--------------+----------------+------------+-------+-------------
-        3002 | Nick Rimando   | New York   |   100 |        5001
-        3007 | Brad Davis     | New York   |   200 |        5001
-        3005 | Graham Zusi    | California |   200 |        5002
+ 
  
 -- 
 

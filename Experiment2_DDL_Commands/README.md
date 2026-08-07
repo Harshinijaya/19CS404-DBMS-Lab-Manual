@@ -108,13 +108,11 @@ CREATE TABLE Table_Name (
 -- Insert all employees from Former_employees into Employee
 
 Table attributes are EmployeeID, Name, Department, Salary
-Test	Result
-select * from Employee;
-EmployeeID  Name        Department  Salary
-----------  ----------  ----------  ----------
-201         John Doe    HR          50000
-202         Jane Smith  Engineerin  75000
-203         Emily Davi  Marketing   60000
+| EmployeeID | Name        | Department  | Salary |
+|------------|-------------|-------------|--------|
+| 201        | John Doe    | HR          | 50000  |
+| 202        | Jane Smith  | Engineering | 75000  |
+| 203        | Emily Davis | Marketing   | 60000  |
 
 ```sql
 INSERT INTO Employee SELECT * FROM Former_employees;

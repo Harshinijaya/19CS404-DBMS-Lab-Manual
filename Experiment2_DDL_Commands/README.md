@@ -105,19 +105,30 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
-
+-- Insert all employees from Former_employees into Employee
 ```sql
--- Paste your SQL code below for Question 1
+Table attributes are EmployeeID, Name, Department, Salary
+Test	Result
+select * from Employee;
+EmployeeID  Name        Department  Salary
+----------  ----------  ----------  ----------
+201         John Doe    HR          50000
+202         Jane Smith  Engineerin  75000
+203         Emily Davi  Marketing   60000
+
+
+
+-- 
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1232" height="427" alt="image" src="https://github.com/user-attachments/assets/c46b4623-5fe4-4364-91ce-5af0deba63f8" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- 
 
 ```sql
 -- Paste your SQL code below for Question 2

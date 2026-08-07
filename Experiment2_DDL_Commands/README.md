@@ -178,7 +178,7 @@ ADD birth_date timestamp;
 
 
 **Question 4**
----
+
 -- create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 For example:
 
@@ -204,8 +204,8 @@ max_salary INT DEFAULT NULL
 
 
 **Question 5**
----
--- Create a table named ProjectAssignments with the following constraints:
+
+Create a table named ProjectAssignments with the following constraints:
 AssignmentID as INTEGER should be the primary key.
 EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
 ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
@@ -228,8 +228,8 @@ AssignmentDate DATE NOT NULL
 
 
 **Question 6**
----
--- Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
+
+ Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
 
 Table attributes are CustomerID, Name, Address
 
@@ -251,8 +251,8 @@ VALUES(304,'Peter Parker','Spider St');
 
 
 **Question 7**
----
--- Create a new table named item with the following specifications and constraints:
+
+Create a new table named item with the following specifications and constraints:
 item_id as TEXT and as primary key.
 item_desc as TEXT.
 rate as INTEGER.
@@ -283,8 +283,8 @@ FOREIGN  KEY (icom_id) REFERENCES company(com_id) ON UPDATE SET NULL ON DELETE S
 
 
 **Question 8**
----
--- Create a table named Invoices with the following constraints:
+
+Create a table named Invoices with the following constraints:
 
 InvoiceID as INTEGER should be the primary key.
 InvoiceDate as DATE.
@@ -309,8 +309,8 @@ Amount REAL CHECK (Amount >0)
 
 
 **Question 9**
----
--- Create a table named Reviews with the following columns:
+
+Create a table named Reviews with the following columns:
 
 ReviewID as INTEGER
 ProductID as INTEGER
@@ -341,8 +341,8 @@ ReviewText TEXT
 
 
 **Question 10**
----
--- Write a SQL Query to add an attribute designation in the employee table with the data type VARCHAR(50).
+
+ Write a SQL Query to add an attribute designation in the employee table with the data type VARCHAR(50).
 
 For example:
 Table attributes are id, salary, designation

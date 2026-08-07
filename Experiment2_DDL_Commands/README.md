@@ -133,6 +133,12 @@ Name        Category     Price       Stock
 Smartphone  Electronics  800         150
 Headphones  Accessories  200         300
 For example:
+Table attributes are Name, Category, Price, Stock
+
+| Name | Category | Price | Stock |
+|------|----------|------:|------:|
+| Smartphone | Electronics | 800 | 150 |
+| Headphones | Accessories | 200 | 300 |
 
 -- 
 
@@ -150,7 +156,13 @@ INSERT INTO Products (Name,Category,Price,Stock) VALUES('Headphones','Accessorie
 ---Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
 
 Sample table: customer
+Table attributes are customer_id, cust_name, city, grade, salesman_id, birth_date
 
+| customer_id | cust_name | city | grade | salesman_id | birth_date |
+|-------------|-----------|------|-------|-------------|------------|
+| 101 | John | Chennai | 100 | 5001 | 1995-06-15 |
+| 102 | Priya | Bangalore | 200 | 5002 | 1998-02-20 |
+| 103 | Rahul | Hyderabad | 300 | 5003 | 1996-09-10 |
  
  
 -- 
@@ -170,13 +182,11 @@ ADD birth_date timestamp;
 -- create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 For example:
 
-Test	Result
-INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (1, 'Software Engineer', 9000, 15000);
-SELECT * FROM jobs;
-job_id      job_title          min_salary  max_salary
-----------  -----------------  ----------  ----------
-1           Software Engineer  9000        15000
+Table attributes are job_id, job_title, min_salary, max_salary
 
+| job_id | job_title | min_salary | max_salary |
+|--------|-----------|-----------:|-----------:|
+| 1 | Software Engineer | 9000 | 15000 |
 ```sql
 CREATE TABLE jobs(
 job_id INT PRIMARY KEY,
@@ -201,10 +211,14 @@ EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
 ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
 AssignmentDate as DATE should be NOT NULL.
 For example:
-
-Test	Result
-INSERT INTO ProjectAssignments (AssignmentID, EmployeeID, ProjectID, AssignmentDate) VALUES (2, 99, 1, '2024-01-03');
+| Test | Result |
+|------|--------|
+| ```sql
+INSERT INTO ProjectAssignments (AssignmentID, EmployeeID, ProjectID, AssignmentDate)
+VALUES (2, 99, 1, '2024-01-03');
+``` | ```text
 Error: FOREIGN KEY constraint failed
+``` |
 
 ```sql
 CREATE TABLE ProjectAssignments(
@@ -224,20 +238,13 @@ AssignmentDate DATE NOT NULL
 ---
 -- Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
 
-CustomerID  Name          Address
-----------  ------------  ----------
-304         Peter Parker  Spider St      
+Table attributes are CustomerID, Name, Address
 
-Note: The City and ZipCode columns will use their default values.
+| CustomerID | Name | Address |
+|------------|------|---------|
+| 304 | Peter Parker | Spider St |
  
-For example:
 
-Test	Result
-SELECT CustomerID, Name, Address
-FROM Customers;
-CustomerID  Name          Address
-----------  ------------  ----------
-304         Peter Parker  Spider St
 
 
 ```sql
@@ -262,14 +269,11 @@ The foreign key should set NULL on updates and deletes.
 item_desc and rate should not accept NULL.
 For example:
 
-Test	Result
-INSERT INTO item VALUES("ITM5","Charlie Gold",700,"COM4");
-UPDATE company SET com_id='COM5' WHERE com_id='COM4';
-SELECT * FROM item;
-item_id     item_desc     rate        icom_id
-----------  ------------  ----------  ----------
-ITM5        Charlie Gold  700
+Table attributes are item_id, item_desc, rate, icom_id
 
+| item_id | item_desc | rate | icom_id |
+|---------|-----------|-----:|---------|
+| ITM5 | Charlie Gold | 700 | COM5 |
 ```sql
 CREATE TABLE item(
 item_id TEXT PRIMARY KEY,
@@ -295,10 +299,6 @@ DueDate as DATE should be greater than the InvoiceDate.
 Amount as REAL should be greater than 0.
 For example:
 
-Test	Result
-INSERT INTO Invoices (InvoiceID, InvoiceDate)
-VALUES (1, '2024-08-08'),(1,'2024-09-08');
-Error: UNIQUE constraint failed: Invoices.InvoiceID
 
 
 ```sql
@@ -325,14 +325,13 @@ Rating as REAL
 ReviewText as TEXT
 For example:
 
-Test	Result
-pragma table_info('Reviews');
-cid         name        type        notnull     dflt_value  pk
-----------  ----------  ----------  ----------  ----------  ----------
-0           ReviewID    INTEGER     0                       0
-1           ProductID   INTEGER     0                       0
-2           Rating      REAL        0                       0
-3           ReviewText  TEXT        0                       0
+Table attributes are ReviewID, ProductID, Rating, ReviewText
+
+| ReviewID | ProductID | Rating | ReviewText |
+|----------|-----------|-------:|------------|
+| 1 | 101 | 4.5 | Excellent product |
+| 2 | 102 | 3.8 | Good quality |
+| 3 | 103 | 5.0 | Highly recommended |
 
 ```sql
 CREATE TABLE Reviews(
@@ -353,14 +352,13 @@ ReviewText TEXT
 -- Write a SQL Query to add an attribute designation in the employee table with the data type VARCHAR(50).
 
 For example:
+Table attributes are id, salary, designation
 
-Test	Result
-pragma table_info('employee');
-cid         name        type        notnull     dflt_value  pk
-----------  ----------  ----------  ----------  ----------  ----------
-0           id          integer     0                       0
-1           salary      number      0                       0
-2           designatio  varchar(50  0                       0
+| id | salary | designation |
+|----|-------:|-------------|
+| 101 | 50000 | Manager |
+| 102 | 35000 | Developer |
+| 103 | 25000 | Tester |
 
 
 ```sql

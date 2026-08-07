@@ -133,10 +133,13 @@ Name        Category     Price       Stock
 Smartphone  Electronics  800         150
 Headphones  Accessories  200         300
 For example:
+Test	Result
+SELECT Name, Category, Price, Stock FROM Products;
 
-| Test | Result |
-|------|--------|
-| `SELECT Name, Category, Price, Stock FROM Products;` | <pre>Name         Category      Price   Stock<br>-----------  ------------  ------  -----<br>Smartphone  Electronics   800     150<br>Headphones  Accessories   200     300</pre> |
+Name         Category      Price      Stock
+-----------  ------------  ---------  -----
+Smartphone   Electronics   800        150
+Headphones   Accessories   200        300
 
 -- 
 

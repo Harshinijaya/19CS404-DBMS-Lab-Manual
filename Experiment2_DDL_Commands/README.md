@@ -211,14 +211,7 @@ EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
 ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
 AssignmentDate as DATE should be NOT NULL.
 For example:
-| Test | Result |
-|------|--------|
-| ```sql
-INSERT INTO ProjectAssignments (AssignmentID, EmployeeID, ProjectID, AssignmentDate)
-VALUES (2, 99, 1, '2024-01-03');
-``` | ```text
-Error: FOREIGN KEY constraint failed
-``` |
+
 
 ```sql
 CREATE TABLE ProjectAssignments(

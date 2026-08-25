@@ -47,123 +47,190 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+-- How many patients have expired insurance coverage for each insurance company?
+
+Sample table:Insurance Table
 
 ```sql
--- Paste your SQL code below for Question 1
+select InsuranceCompany,COUNT(InsuranceID) AS TotalExpiredPatients FROM Insurance GROUP BY(InsuranceCompany); 
 ```
 
 **Output:**
 
-![Output1](output.png)
+
+<img width="871" height="827" alt="image" src="https://github.com/user-attachments/assets/c090ad17-4c35-48c9-94e4-1b95f83a5fa0" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- What is the most common diagnosis among patients?
+
+Sample table:MedicalRecords Table
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT Diagnosis,COUNT(*) AS DiagnosisCount FROM MedicalRecords GROUP BY Diagnosis ORDER BY DiagnosisCount DESC limit 1;
 ```
 
 **Output:**
 
-![Output2](output.png)
+
+<img width="968" height="398" alt="image" src="https://github.com/user-attachments/assets/b0e18dfa-9ccd-4068-b634-a415a800d319" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- How many appointments are scheduled for each doctor?
+
+Sample table:Appointments Table
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT DoctorID,COUNT(AppointmentID) AS TotalAppointments FROM Appointments GROUP BY DoctorID;
 ```
 
 **Output:**
 
-![Output3](output.png)
+
+<img width="715" height="697" alt="image" src="https://github.com/user-attachments/assets/ebff8164-6261-467e-95be-20a66986cffb" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- ## Count Customers Who Received a Grade
+
+**Question:**  
+Write a SQL query to determine the number of customers who received at least one grade for their activity.
+
+### Sample Table: `customer`
+
+| customer_id | cust_name | city | grade | salesman_id |
+|---|---|---|---:|---:|
+| 3002 | Nick Rimando | New York | 100 | 5001 |
+| 3007 | Brad Davis | New York | 200 | 5001 |
+| 3005 | Graham Zusi | California | 200 | 5002 |
+
+### SQL Query
+
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select count(*) as COUNT from customer where grade>=1;
 ```
 
 **Output:**
 
-![Output4](output.png)
+
+<img width="392" height="407" alt="image" src="https://github.com/user-attachments/assets/ada1f357-3cec-4f60-b333-82476ef5cf3d" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- Write a SQL query to return the total number of rows in the 'customer' table where the city is Noida.
+
+Sample table: customer
 
 ```sql
--- Paste your SQL code below for Question 5
+-- SELECT COUNT(*) AS COUNT FROM customer WHERE city='Noida';
 ```
 
 **Output:**
 
-![Output5](output.png)
+
+
+<img width="372" height="405" alt="image" src="https://github.com/user-attachments/assets/b6c90cf1-7e31-4adf-af6c-39507931f2b6" />
 
 **Question 6**
 ---
--- Paste Question 6 here
+--## Total Amount of Fruits with Unit Type 'LB'
+
+**Question:**  
+Write a SQL query to find the total amount of fruits with a unit type of `'LB'`.
+
+**Note:** Inventory attribute contains the amount of fruits.
+
+### Table: `fruits`
+
+| id | name | unit | inventory | price |
+|---:|---|---|---:|---:|
+| 1 | Apple | LB | 50 | 2.5 |
+| 2 | Banana | KG | 30 | 1.5 |
+| 3 | Orange | LB | 40 | 2.0 |
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select SUM(inventory) as total from fruits where unit='LB';
 ```
 
 **Output:**
 
-![Output6](output.png)
+
+<img width="417" height="392" alt="image" src="https://github.com/user-attachments/assets/731c74b0-7f38-4ffd-9674-cfab822a2b6c" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- Write a SQL query to return the total number of rows in the 'customer' table where the city is not Noida.
+
+Sample table: customer
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT COUNT(*) as COUNT from customer where city<> 'Noida';
 ```
 
 **Output:**
 
-![Output7](output.png)
+
+<img width="398" height="420" alt="image" src="https://github.com/user-attachments/assets/5e7b0fca-3c50-4ecd-84b7-4239dd291d79" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+-- Write an SQL query that groups the customer data into 5-year age intervals, calculates the minimum salary for each group, and excludes groups where the minimum salary is not less than 2000.
+
+Table: customer1
 
 ```sql
--- Paste your SQL code below for Question 8
+-- SELECT (age/5)*5  age_group,MIN(salary) FROM customer1 group by age_group HAVING MIN(salary)<2000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+
+<img width="610" height="441" alt="image" src="https://github.com/user-attachments/assets/76f91820-775f-4a1c-a033-2d1e0ada6994" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- Write the SQL query that achieves the grouping of data by age intervals using the expression (age/5)5, calculates the average age for each group, and excludes groups where the average age is not less than 24.
+
+Sample table: customer1
+
+
 
 ```sql
--- Paste your SQL code below for Question 9
+-- SELECT (age/5)*5 as  age_group,AVG(age) FROM customer1 group by age_group HAVING AVG(age)<24;
 ```
 
 **Output:**
 
-![Output9](output.png)
+
+<img width="667" height="403" alt="image" src="https://github.com/user-attachments/assets/73e4204f-17f7-4b28-9638-1fddc014b349" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- Write the SQL query that achieves the grouping of data by age intervals using the expression (age/5)5, calculates the total salary sum for each group, and excludes groups where the total salary sum is not greater than 5000.
+
+Sample table: customer1
 
 ```sql
--- Paste your SQL code below for Question 10
+-- SELECT (age/5)*5  age_group,SUM(salary) FROM customer1 group by age_group HAVING SUM(salary)>5000;
 ```
 
 **Output:**
 
-![Output10](output.png)
+
+<img width="672" height="447" alt="image" src="https://github.com/user-attachments/assets/a0705918-3e5e-4b11-8390-8585f3e13071" />
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
